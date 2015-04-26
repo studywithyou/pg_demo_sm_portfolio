@@ -320,4 +320,7 @@ function onFail(message) {
     alert('Failed because: ' + message);
 }
 	
+function vibration(){
+	navigator.vibrate(3000);
+}	
 		
