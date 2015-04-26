@@ -303,5 +303,21 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };	
+
+function camera(){
+	navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+		destinationType: Camera.DestinationType.DATA_URL
+	});
+}
+
+function onSuccess(imageData) {
+    //var image = document.getElementById('myImage');
+    //image.src = "data:image/jpeg;base64," + imageData;
+	alert('Failed because: success');
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
 	
 		
